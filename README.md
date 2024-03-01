@@ -1,6 +1,19 @@
 # AKSW Maven-Based Data Deployment
 
+## The parent
 
+The following parent declaration adds the AKSW repositories (see the [pom.xml](pom.xml) to the maven projects:
+
+```xml
+<parent>
+  <groupId>org.aksw.data.config</groupId>
+  <artifactId>aksw-data-deployment</artifactId>
+  <version>0.0.8</version>
+  <relativePath></relativePath>
+</parent>
+```
+
+## Setup
 
 * **Step 1** Install Maven
   `sudo apt install maven`
