@@ -1,6 +1,11 @@
 # AKSW Maven-Based Data Deployment
 
-## The parent
+See [https://scaseco.github.io/maven4data/](https://scaseco.github.io/maven4data/) for guides about why and how to use Maven for data publishing.
+
+This repository contains a pom.xml with several default settings (repository URLs and versions) intended for use as a parent pom for data publishing project within the AKSW organization.
+The POM is intended **only** for use with AKSW projects.
+
+## The Parent POM
 
 The following parent declaration adds the AKSW repositories (see the [pom.xml](pom.xml) to the maven projects:
 
@@ -13,7 +18,7 @@ The following parent declaration adds the AKSW repositories (see the [pom.xml](p
 </parent>
 ```
 
-## Setup
+## Setup Maven
 
 * **Step 1** Install Maven
   `sudo apt install maven`
@@ -47,29 +52,22 @@ The following parent declaration adds the AKSW repositories (see the [pom.xml](p
     	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                           http://maven.apache.org/xsd/settings-1.0.0.xsd">
-      <servers>
-        <server>
-          <id>dm.coypu.org</id>
-          <username>aklakan_github</username>
-          <password>{SECRET}</password>
-        </server>
-    
         <server>
           <id>et.aksw.internal</id>
-          <username>ClausStadler</username>
+          <username>USERNAME</username>
           <password>{SECRET}</password>
         </server>
     
         <server>
           <id>et.aksw.snapshots</id>
-          <username>ClausStadler</username>
+          <username>USERNAME</username>
           <password>{SECRET}</password>
         </server>
       </servers>
     </settings>
     ```
 
-  * **Step 5** Try to deploy `https://github.com/Scaseco/maven4data/tree/develop/examples/geodata/simple`
+* **Step 5** Try to deploy an example project such as [geodata/simple](https://github.com/Scaseco/maven4data/tree/develop/examples/geodata/simple).
 
-  * **Step 6** Tell the Admin to grant you write priviledges
+* **Step 6** If necessary, please tell the admin to grant you write priviledges to our archiva instance.
 
